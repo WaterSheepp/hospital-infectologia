@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DisplacementMap?>
+<?import javafx.scene.effect.FloatMap?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alvaroramirez.controller.AreasController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="900.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Fondo.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="90.0" fitWidth="900.0" layoutY="15.0" opacity="0.56" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/barra.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="25.0" layoutY="15.0" prefHeight="53.0" prefWidth="153.0" text="A R E A S" textFill="WHITE">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="70.0" layoutY="61.0" text="Modulo" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtAreas" disable="true" editable="false" layoutX="95.0" layoutY="161.0" prefHeight="25.0" prefWidth="269.0" promptText="EJ.  Cardiologia" style="-fx-background-radius: 7px; -fx-border-radius: 7px;" />
+      <Label layoutX="56.0" layoutY="163.0" text="Area">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblAreas" layoutX="375.0" layoutY="95.0" onKeyReleased="#seleccionar" onMouseClicked="#seleccionar" prefHeight="416.0" prefWidth="384.0" style="-fx-background-color: transparent; -fx-border-color: #ffffff;">
+        <columns>
+          <TableColumn fx:id="colCodigoArea" prefWidth="179.0" text="Codigo Area" />
+          <TableColumn fx:id="colNombreArea" prefWidth="203.0" text="Nombre Area" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnAgregar" layoutX="237.0" layoutY="249.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="44.0" prefWidth="104.0" style="-fx-background-color: #2fb8bc; -fx-border-radius: 30px; -fx-background-radius: 30px;" text="✚" textFill="WHITE">
+         <font>
+            <Font name="Microsoft New Tai Lue" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DisplacementMap>
+               <mapData>
+                  <FloatMap />
+               </mapData>
+            </DisplacementMap>
+         </effect>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Button>
+      <Button fx:id="btnEliminar" layoutX="237.0" layoutY="322.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="44.0" prefWidth="104.0" style="-fx-background-color: #2fb8bc; -fx-background-radius: 30px;" text="✖" textFill="WHITE">
+         <font>
+            <Font name="Microsoft New Tai Lue" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DisplacementMap>
+               <mapData>
+                  <FloatMap />
+               </mapData>
+            </DisplacementMap>
+         </effect>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Button>
+      <Button fx:id="btnReporte" layoutX="237.0" layoutY="472.0" mnemonicParsing="false" onAction="#imprimirReporte" prefHeight="44.0" prefWidth="104.0" style="-fx-background-color: #2fb8bc; -fx-border-radius: 30px; -fx-background-radius: 30px;" text="✔" textFill="WHITE">
+         <font>
+            <Font name="Microsoft New Tai Lue" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DisplacementMap>
+               <mapData>
+                  <FloatMap />
+               </mapData>
+            </DisplacementMap>
+         </effect>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Button>
+      <Button fx:id="btnEditar" layoutX="237.0" layoutY="390.0" mnemonicParsing="false" onAction="#editar" prefHeight="44.0" prefWidth="104.0" style="-fx-background-color: #2fb8bc; -fx-border-radius: 30px; -fx-background-radius: 30px;" text="✍" textFill="WHITE">
+         <font>
+            <Font name="Microsoft New Tai Lue" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DisplacementMap>
+               <mapData>
+                  <FloatMap />
+               </mapData>
+            </DisplacementMap>
+         </effect>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Button>
+      <Label layoutX="263.0" layoutY="292.0" prefHeight="22.0" prefWidth="60.0" text="Añadir" textFill="WHITE">
+         <font>
+            <Font name="Microsoft JhengHei" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="268.0" layoutY="368.0" prefHeight="22.0" prefWidth="60.0" text="Eliminar" textFill="WHITE">
+         <font>
+            <Font name="Microsoft JhengHei" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="270.0" layoutY="436.0" prefHeight="22.0" prefWidth="60.0" text="Editar" textFill="WHITE">
+         <font>
+            <Font name="Microsoft JhengHei" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="262.0" layoutY="518.0" prefHeight="22.0" prefWidth="60.0" text="Reporte" textFill="WHITE">
+         <font>
+            <Font name="Microsoft JhengHei" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="56.0" layoutY="124.0" text="Codigo Area">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbCodigoArea" disable="true" layoutX="155.0" layoutY="122.0" prefWidth="150.0" style="-fx-background-color: white; -fx-background-radius: 7px; -fx-border-radius: 7px;" />
+      <ImageView fitHeight="53.0" fitWidth="98.0" layoutX="203.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons8-globo-terráqueo-64.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="600.0" fitWidth="100.0" layoutX="800.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/BarraVertical.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="810.0" layoutY="244.0" onMouseClicked="#menuPrincipal" text="Menu Principal">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <ImageView fitHeight="28.0" fitWidth="46.0" layoutX="836.0" layoutY="214.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Home.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="53.0" fitWidth="49.0" layoutX="826.0" layoutY="279.0" onMouseClicked="#ventanaResponsableTurno" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons8-reloj-64.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="801.0" layoutY="333.0" onMouseClicked="#ventanaResponsableTurno" text="ResponsableTurno" />
+   </children>
+</AnchorPane>

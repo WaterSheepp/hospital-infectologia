@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DisplacementMap?>
+<?import javafx.scene.effect.FloatMap?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alvaroramirez.controller.PacientesController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="900.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Fondo.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="90.0" fitWidth="900.0" layoutY="14.0" opacity="0.56" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/barra.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="80.0" layoutY="102.0" text="D P I" />
+      <Label layoutX="80.0" layoutY="140.0" text="Nombres" />
+      <Label layoutX="80.0" layoutY="183.0" text="Apellidos" />
+      <Label layoutX="234.0" layoutY="220.0" text="Fecha Nacimiento" />
+      <Label layoutX="80.0" layoutY="220.0" text="Edad" />
+      <Label layoutX="428.0" layoutY="102.0" text="Direccion " />
+      <Label layoutX="428.0" layoutY="140.0" text="Ocupacion" />
+      <Label layoutX="428.0" layoutY="174.0" text="Sexo" />
+      <TextField fx:id="txtDpi" disable="true" editable="false" layoutX="156.0" layoutY="102.0" prefHeight="25.0" prefWidth="250.0" style="-fx-background-radius: 7px; -fx-border-radius: 7px;" />
+      <TextField fx:id="txtNombres" disable="true" editable="false" layoutX="156.0" layoutY="136.0" prefWidth="250.0" style="-fx-background-radius: 7px; -fx-border-radius: 7px;" />
+      <TextField fx:id="txtApellidos" disable="true" editable="false" layoutX="156.0" layoutY="174.0" prefWidth="250.0" style="-fx-background-radius: 7px; -fx-border-radius: 7px;" />
+      <TextField fx:id="txtEdad" disable="true" editable="false" layoutX="149.0" layoutY="216.0" prefHeight="25.0" prefWidth="49.0" style="-fx-background-radius: 7px; -fx-border-radius: 7px;" />
+      <TextField fx:id="txtDireccion" disable="true" editable="false" layoutX="500.0" layoutY="100.0" prefWidth="250.0" style="-fx-background-radius: 7px; -fx-border-radius: 7px;" />
+      <TextField fx:id="txtOcupacion" disable="true" editable="false" layoutX="500.0" layoutY="134.0" prefWidth="250.0" style="-fx-background-radius: 7px; -fx-border-radius: 7px;" />
+      <TextField fx:id="txtSexo" disable="true" editable="false" layoutX="500.0" layoutY="174.0" prefWidth="250.0" style="-fx-background-radius: 7px; -fx-border-radius: 7px;" />
+      <GridPane fx:id="grpFechaNacimiento" disable="true" layoutX="340.0" layoutY="215.0" prefHeight="28.0" prefWidth="132.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <DatePicker fx:id="dtpFechaNacimiento" disable="true" editable="false" />
+         </children>
+      </GridPane>
+      <TableView fx:id="tblPacientes" layoutX="39.0" layoutY="280.0" onKeyReleased="#seleccionar" onMouseClicked="#seleccionar" prefHeight="205.0" prefWidth="732.0" style="-fx-background-color: transparent; -fx-border-color: white;">
+        <columns>
+          <TableColumn fx:id="colCodigoPacientes" prefWidth="51.0" text="Codigo" />
+          <TableColumn fx:id="colDpi" prefWidth="71.0" text="DPI" />
+            <TableColumn fx:id="colApellidos" prefWidth="83.0" text="Apellidos" />
+            <TableColumn fx:id="colNombres" prefWidth="95.0" text="Nombres" />
+            <TableColumn fx:id="colFechaNacimiento" prefWidth="107.0" text="Fecha Nacimiento" />
+            <TableColumn fx:id="colEdad" prefWidth="43.0" text="Edad" />
+            <TableColumn fx:id="colDireccion" prefWidth="115.0" text="Direccion" />
+            <TableColumn fx:id="colOcupacion" prefWidth="91.0" text="Ocupacion" />
+            <TableColumn fx:id="colSexo" prefWidth="74.0" text="Sexo" />
+        </columns>
+      </TableView>
+      <Label layoutX="11.0" layoutY="14.0" prefHeight="53.0" prefWidth="277.0" text="P A C I E N T E S" textFill="WHITE">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="111.0" layoutY="60.0" text="Modulo" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="500.0" layoutY="220.0" text="Codigo" />
+      <TextField fx:id="txtCodigoPaciente" disable="true" editable="false" layoutX="569.0" layoutY="216.0" prefHeight="25.0" prefWidth="49.0" style="-fx-background-radius: 7px; -fx-border-radius: 7px;" />
+      <Button fx:id="btnNuevo" layoutX="211.0" layoutY="506.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="44.0" prefWidth="104.0" style="-fx-background-color: #2fb8bc; -fx-border-radius: 30px; -fx-background-radius: 30px;" text="✚" textFill="WHITE">
+         <font>
+            <Font name="Microsoft New Tai Lue" size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DisplacementMap>
+               <mapData>
+                  <FloatMap />
+               </mapData>
+            </DisplacementMap>
+         </effect>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Button>
+      <Button fx:id="btnEliminar" layoutX="340.0" layoutY="503.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="44.0" prefWidth="104.0" style="-fx-background-color: #2fb8bc; -fx-background-radius: 30px;" text="✖" textFill="WHITE">
+         <font>
+            <Font name="Microsoft New Tai Lue" size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DisplacementMap>
+               <mapData>
+                  <FloatMap />
+               </mapData>
+            </DisplacementMap>
+         </effect>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Button>
+      <Button fx:id="btnReporte" layoutX="602.0" layoutY="503.0" mnemonicParsing="false" onAction="#imprimirReporte" prefHeight="44.0" prefWidth="104.0" style="-fx-background-color: #2fb8bc; -fx-border-radius: 30px; -fx-background-radius: 30px;" text="✔" textFill="WHITE">
+         <font>
+            <Font name="Microsoft New Tai Lue" size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DisplacementMap>
+               <mapData>
+                  <FloatMap />
+               </mapData>
+            </DisplacementMap>
+         </effect>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Button>
+      <Button fx:id="btnEditar" layoutX="462.0" layoutY="503.0" mnemonicParsing="false" onAction="#editar" prefHeight="44.0" prefWidth="104.0" style="-fx-background-color: #2fb8bc; -fx-border-radius: 30px; -fx-background-radius: 30px;" text="✍" textFill="WHITE">
+         <font>
+            <Font name="Microsoft New Tai Lue" size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DisplacementMap>
+               <mapData>
+                  <FloatMap />
+               </mapData>
+            </DisplacementMap>
+         </effect>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Button>
+      <Label layoutX="237.0" layoutY="563.0" prefHeight="22.0" prefWidth="68.0" text="Añadir" textFill="WHITE">
+         <font>
+            <Font name="Microsoft JhengHei" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="371.0" layoutY="563.0" prefHeight="22.0" prefWidth="68.0" text="Eliminar" textFill="WHITE">
+         <font>
+            <Font name="Microsoft JhengHei" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="495.0" layoutY="563.0" prefHeight="22.0" prefWidth="68.0" text="Editar" textFill="WHITE">
+         <font>
+            <Font name="Microsoft JhengHei" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="630.0" layoutY="563.0" prefHeight="22.0" prefWidth="68.0" text="Reporte" textFill="WHITE">
+         <font>
+            <Font name="Microsoft JhengHei" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="600.0" fitWidth="100.0" layoutX="799.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/BarraVertical.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="809.0" layoutY="157.0" onMouseClicked="#menuPrincipal" text="Menu Principal">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <ImageView fitHeight="28.0" fitWidth="46.0" layoutX="835.0" layoutY="127.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Home.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Line endX="100.0" layoutX="799.0" layoutY="186.0" stroke="#2fb8bc" />
+      <Line endX="100.0" layoutX="799.0" layoutY="286.0" stroke="#2fb8bc" />
+      <Line endX="3.0" endY="600.0" layoutX="795.0" startX="3.0" stroke="#2fb8bc" />
+      <ImageView fitHeight="56.0" fitWidth="68.0" layoutX="821.0" layoutY="192.0" onMouseClicked="#ventanaTurno" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons8-calendario-64%20(1).png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="830.0" layoutY="255.0" onMouseClicked="#ventanaTurno" text="Turnos">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <ImageView fitHeight="53.0" fitWidth="68.0" layoutX="822.0" layoutY="301.0" onMouseClicked="#ventanaContactoUrgencias" opacity="0.8" pickOnBounds="true" preserveRatio="true" rotate="-24.2">
+         <image>
+            <Image url="@../images/icons8-telefono-de-oficina-64.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="801.0" layoutY="368.0" onMouseClicked="#ventanaContactoUrgencias" text="ContactoUrgencia">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <ImageView fitHeight="53.0" fitWidth="70.0" layoutX="278.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/754554.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

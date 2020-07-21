@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DisplacementMap?>
+<?import javafx.scene.effect.FloatMap?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alvaroramirez.controller.CargosController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="900.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Fondo.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="90.0" fitWidth="900.0" layoutY="15.0" opacity="0.56" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/barra.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="97.0" layoutY="60.0" text="Modulo" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="55.0" layoutY="15.0" prefHeight="53.0" prefWidth="116.0" text="Cargos" textFill="WHITE">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCargo" disable="true" editable="false" layoutX="73.0" layoutY="143.0" prefHeight="25.0" prefWidth="269.0" promptText="EJ . Bioquimicos" style="-fx-background-radius: 7px; -fx-border-radius: 7px;" />
+      <Label layoutX="34.0" layoutY="145.0" text="Cargo">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblCargos" layoutX="369.0" layoutY="106.0" onKeyReleased="#seleccionar" onMouseClicked="#seleccionar" prefHeight="416.0" prefWidth="384.0" style="-fx-background-color: transparent; -fx-border-color: #ffffff;">
+         <columns>
+            <TableColumn fx:id="colCodigoCargo" prefWidth="179.0" text="Codigo Cargo" />
+            <TableColumn fx:id="colNombreCargo" prefWidth="203.0" text="Nombre Cargo" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnAgregar" layoutX="215.0" layoutY="231.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="44.0" prefWidth="104.0" style="-fx-background-color: #2fb8bc; -fx-border-radius: 30px; -fx-background-radius: 30px;" text="✚" textFill="WHITE">
+         <font>
+            <Font name="Microsoft New Tai Lue" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DisplacementMap>
+               <mapData>
+                  <FloatMap />
+               </mapData>
+            </DisplacementMap>
+         </effect>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Button>
+      <Button fx:id="btnEliminar" layoutX="215.0" layoutY="304.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="44.0" prefWidth="104.0" style="-fx-background-color: #2fb8bc; -fx-background-radius: 30px;" text="✖" textFill="WHITE">
+         <font>
+            <Font name="Microsoft New Tai Lue" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DisplacementMap>
+               <mapData>
+                  <FloatMap />
+               </mapData>
+            </DisplacementMap>
+         </effect>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Button>
+      <Button fx:id="btnReporte" layoutX="215.0" layoutY="454.0" mnemonicParsing="false" onAction="#imprimirReporte" prefHeight="44.0" prefWidth="104.0" style="-fx-background-color: #2fb8bc; -fx-border-radius: 30px; -fx-background-radius: 30px;" text="✔" textFill="WHITE">
+         <font>
+            <Font name="Microsoft New Tai Lue" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DisplacementMap>
+               <mapData>
+                  <FloatMap />
+               </mapData>
+            </DisplacementMap>
+         </effect>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Button>
+      <Button fx:id="btnEditar" layoutX="215.0" layoutY="372.0" mnemonicParsing="false" onAction="#editar" prefHeight="44.0" prefWidth="104.0" style="-fx-background-color: #2fb8bc; -fx-border-radius: 30px; -fx-background-radius: 30px;" text="✍" textFill="WHITE">
+         <font>
+            <Font name="Microsoft New Tai Lue" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DisplacementMap>
+               <mapData>
+                  <FloatMap />
+               </mapData>
+            </DisplacementMap>
+         </effect>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Button>
+      <Label layoutX="241.0" layoutY="274.0" prefHeight="22.0" prefWidth="60.0" text="Añadir" textFill="WHITE">
+         <font>
+            <Font name="Microsoft JhengHei" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="246.0" layoutY="350.0" prefHeight="22.0" prefWidth="60.0" text="Eliminar" textFill="WHITE">
+         <font>
+            <Font name="Microsoft JhengHei" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="248.0" layoutY="418.0" prefHeight="22.0" prefWidth="60.0" text="Editar" textFill="WHITE">
+         <font>
+            <Font name="Microsoft JhengHei" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="240.0" layoutY="500.0" prefHeight="22.0" prefWidth="60.0" text="Reporte" textFill="WHITE">
+         <font>
+            <Font name="Microsoft JhengHei" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="34.0" layoutY="106.0" text="Codigo Cargo">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbCodigoCargo" disable="true" layoutX="133.0" layoutY="104.0" prefWidth="150.0" style="-fx-background-color: white; -fx-background-radius: 7px; -fx-border-radius: 7px;" />
+      <ImageView fitHeight="53.0" fitWidth="60.0" layoutX="181.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icono-Enfermeria.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="600.0" fitWidth="100.0" layoutX="799.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/BarraVertical.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="809.0" layoutY="241.0" onMouseClicked="#menuPrincipal" text="Menu Principal">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <ImageView fitHeight="28.0" fitWidth="46.0" layoutX="835.0" layoutY="211.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Home.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Line endX="100.0" layoutX="799.0" layoutY="270.0" stroke="#2fb8bc" />
+      <Line endX="3.0" endY="600.0" layoutX="795.0" startX="3.0" stroke="#2fb8bc" />
+      <ImageView fitHeight="53.0" fitWidth="49.0" layoutX="825.0" layoutY="276.0" onMouseClicked="#ventanaResponsableTurno" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons8-reloj-64.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="800.0" layoutY="330.0" onMouseClicked="#ventanaResponsableTurno" text="ResponsableTurno" />
+   </children>
+</AnchorPane>

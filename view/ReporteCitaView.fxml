@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alvaroramirez.controller.ReporteCitaController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="900.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Fondo.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="90.0" fitWidth="900.0" layoutY="15.0" opacity="0.56" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/barra.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="71.0" layoutY="21.0" prefHeight="53.0" prefWidth="224.0" text="Reporte Cita " textFill="WHITE">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Line endX="500.0" layoutX="215.0" layoutY="160.0" startX="10.0" stroke="WHITE" />
+      <Line endX="500.0" layoutX="215.0" layoutY="200.0" startX="10.0" stroke="WHITE" />
+      <ImageView fitHeight="30.0" fitWidth="50.0" layoutX="110.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true" x="130.0">
+         <image>
+            <Image url="@../images/icons8-doctor-en-medicina-48.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="50.0" layoutX="110.0" layoutY="166.0" pickOnBounds="true" preserveRatio="true" x="130.0">
+         <image>
+            <Image url="@../images/754554.png" />
+         </image>
+      </ImageView>
+      <Line endX="500.0" layoutX="215.0" layoutY="242.0" startX="10.0" stroke="WHITE" />
+      <Line endX="500.0" layoutX="215.0" layoutY="282.0" startX="10.0" stroke="WHITE" />
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="109.0" layoutY="204.0" pickOnBounds="true" preserveRatio="true" x="130.0">
+         <image>
+            <Image url="@../images/horariosIcon.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="109.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true" x="130.0">
+         <image>
+            <Image url="@../images/icono-Enfermeria.png" />
+         </image>
+      </ImageView>
+      <Line endX="500.0" layoutX="215.0" layoutY="322.0" startX="10.0" stroke="WHITE" />
+      <Line endX="500.0" layoutX="215.0" layoutY="362.0" startX="10.0" stroke="WHITE" />
+      <Line endX="500.0" layoutX="215.0" layoutY="404.0" startX="10.0" stroke="WHITE" />
+      <Line endX="500.0" layoutX="215.0" layoutY="444.0" startX="10.0" stroke="WHITE" />
+      <ImageView fitHeight="65.0" fitWidth="30.0" layoutX="109.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true" x="130.0">
+         <image>
+            <Image url="@../images/icons8-estetoscopio-64.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="105.0" layoutY="325.0" pickOnBounds="true" preserveRatio="true" x="130.0">
+         <image>
+            <Image url="@../images/icons8-calendario-64%20(1).png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="105.0" layoutY="366.0" pickOnBounds="true" preserveRatio="true" x="130.0">
+         <image>
+            <Image url="@../images/icons8-globo-terráqueo-64.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="105.0" layoutY="407.0" pickOnBounds="true" preserveRatio="true" x="130.0">
+         <image>
+            <Image url="@../images/MedicoEspecialidadICON.png" />
+         </image>
+      </ImageView>
+      <Line endX="500.0" layoutX="209.0" layoutY="488.0" startX="10.0" stroke="WHITE" />
+      <Line endX="500.0" layoutX="209.0" layoutY="528.0" startX="10.0" stroke="WHITE" />
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="109.0" layoutY="447.0" pickOnBounds="true" preserveRatio="true" x="130.0">
+         <image>
+            <Image url="@../images/Telefono.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="109.0" layoutY="497.0" pickOnBounds="true" preserveRatio="true" rotate="15.4" x="130.0">
+         <image>
+            <Image url="@../images/icons8-telefono-de-oficina-64.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="560.0" layoutY="138.0" onMouseClicked="#MedicoGeneral" text="MEDICOS" textFill="#1609ff">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Label layoutX="337.0" layoutY="89.0" text="R E P O R T E  G E N E R A L" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="560.0" layoutY="173.0" onMouseClicked="#PacienteGeneral" text="PACIENTES" textFill="#1609ff">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Label layoutX="560.0" layoutY="219.0" onMouseClicked="#HorariosGeneral" text="HORARIOS" textFill="#1609ff">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Label layoutX="560.0" layoutY="255.0" onMouseClicked="#CargosGeneral" text="CARGOS" textFill="#1609ff">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Label layoutX="560.0" layoutY="292.0" onMouseClicked="#EspecialidadesGeneral" text="ESPECIALIDAD" textFill="#1609ff">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Label layoutX="560.0" layoutY="332.0" onMouseClicked="#TurnoGeneral" text="TURNOS" textFill="#1609ff">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Label layoutX="560.0" layoutY="373.0" onMouseClicked="#AreasGeneral" text="AREAS" textFill="#1609ff">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Label layoutX="560.0" layoutY="414.0" onMouseClicked="#MedicoEspecialidaReporte" text="MEDICO ESPECIALIDAD" textFill="#1609ff">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Label layoutX="560.0" layoutY="454.0" onMouseClicked="#TelefonoMedicoGeneral" text="TELEFONO MEDICO" textFill="#1609ff">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Label layoutX="560.0" layoutY="504.0" onMouseClicked="#ContactoUrgenciaGeneral" text="CONTACTO URGENCIA" textFill="#1609ff">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Label layoutX="796.0" layoutY="57.0" onMouseClicked="#menuPrincipal" text="Menu Principal">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <ImageView fitHeight="37.0" fitWidth="86.0" layoutX="818.0" layoutY="21.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Home.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="239.0" layoutY="540.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons8-reloj-64.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="560.0" layoutY="547.0" onMouseClicked="#ResponsableTurnoGeneral" text="REPONSABLE TURNO" textFill="#1609ff">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+   </children>
+</AnchorPane>

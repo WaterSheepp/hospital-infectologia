@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DisplacementMap?>
+<?import javafx.scene.effect.FloatMap?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alvaroramirez.controller.TelefonoMedicoController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="900.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Fondo.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="90.0" fitWidth="900.0" layoutY="15.0" opacity="0.56" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/barra.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="14.0" layoutY="11.0" prefHeight="53.0" prefWidth="353.0" text="Telefonos Medico" textFill="WHITE">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="145.0" layoutY="54.0" text="Modulo" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="53.0" fitWidth="42.0" layoutX="309.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/phone.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="54.0" layoutY="210.0" prefHeight="17.0" prefWidth="115.0" text="Telefono Personal">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="54.0" layoutY="255.0" prefHeight="17.0" prefWidth="115.0" text="Telefono Trabajo">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtTelefonoPersonal" alignment="CENTER" disable="true" editable="false" layoutX="190.0" layoutY="208.0" prefHeight="30.0" prefWidth="200.0" promptText="0000 - 0000" style="-fx-border-radius: 7px; -fx-background-radius: 7px;" />
+      <TextField fx:id="txtTelefonoTrabajo" alignment="CENTER" disable="true" editable="false" layoutX="190.0" layoutY="253.0" prefHeight="30.0" prefWidth="200.0" promptText="0000 - 0000" style="-fx-border-radius: 7px; -fx-background-radius: 7px;" />
+      <TableView fx:id="tblTelefonoMedico" layoutX="406.0" layoutY="101.0" onKeyReleased="#seleccionar" onMouseClicked="#seleccionar" prefHeight="428.0" prefWidth="372.0" style="-fx-background-color: transparent; -fx-border-color: white;">
+        <columns>
+          <TableColumn fx:id="colCodigoTelefono" prefWidth="55.0" text="Codigo" />
+          <TableColumn fx:id="colTelefonoPersonal" prefWidth="115.0" text="Telefono Personal" />
+            <TableColumn fx:id="colTelefonoTrabajo" prefWidth="103.0" text="Telefono Trabajo" />
+            <TableColumn fx:id="colCodigoMedico" prefWidth="98.0" text="Codigo Medico" />
+            <TableColumn prefWidth="115.0" text="Telefono Personal" />
+        </columns>
+      </TableView>
+      <Label layoutX="54.0" layoutY="161.0" prefHeight="17.0" prefWidth="115.0" text="CodigoMedico">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbCodigo" disable="true" layoutX="190.0" layoutY="115.0" prefWidth="150.0" style="-fx-background-color: white; -fx-background-radius: 7px; -fx-border-radius: 7px;" />
+      <Label layoutX="54.0" layoutY="119.0" prefHeight="20.0" prefWidth="49.0" text="Codigo">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCodigoMedico" alignment="CENTER" disable="true" editable="false" layoutX="190.0" layoutY="157.0" prefHeight="30.0" prefWidth="200.0" style="-fx-border-radius: 7px; -fx-background-radius: 7px;" />
+      <Button fx:id="btnAgregar" layoutX="278.0" layoutY="293.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="44.0" prefWidth="104.0" style="-fx-background-color: #2fb8bc; -fx-border-radius: 30px; -fx-background-radius: 30px;" text="✚" textFill="WHITE">
+         <font>
+            <Font name="Microsoft New Tai Lue" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DisplacementMap>
+               <mapData>
+                  <FloatMap />
+               </mapData>
+            </DisplacementMap>
+         </effect>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Button>
+      <Button fx:id="btnEliminar" layoutX="278.0" layoutY="358.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="44.0" prefWidth="104.0" style="-fx-background-color: #2fb8bc; -fx-background-radius: 30px;" text="✖" textFill="WHITE">
+         <font>
+            <Font name="Microsoft New Tai Lue" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DisplacementMap>
+               <mapData>
+                  <FloatMap />
+               </mapData>
+            </DisplacementMap>
+         </effect>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Button>
+      <Button fx:id="btnReporte" layoutX="278.0" layoutY="490.0" mnemonicParsing="false" onAction="#imprimirReporte" prefHeight="44.0" prefWidth="104.0" style="-fx-background-color: #2fb8bc; -fx-border-radius: 30px; -fx-background-radius: 30px;" text="✔" textFill="WHITE">
+         <font>
+            <Font name="Microsoft New Tai Lue" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DisplacementMap>
+               <mapData>
+                  <FloatMap />
+               </mapData>
+            </DisplacementMap>
+         </effect>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Button>
+      <Button fx:id="btnEditar" layoutX="278.0" layoutY="424.0" mnemonicParsing="false" onAction="#editar" prefHeight="44.0" prefWidth="104.0" style="-fx-background-color: #2fb8bc; -fx-border-radius: 30px; -fx-background-radius: 30px;" text="✍" textFill="WHITE">
+         <font>
+            <Font name="Microsoft New Tai Lue" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DisplacementMap>
+               <mapData>
+                  <FloatMap />
+               </mapData>
+            </DisplacementMap>
+         </effect>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Button>
+      <Label layoutX="302.0" layoutY="337.0" prefHeight="22.0" prefWidth="60.0" text="Añadir" textFill="WHITE">
+         <font>
+            <Font name="Microsoft JhengHei" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="299.0" layoutY="402.0" prefHeight="22.0" prefWidth="68.0" text="Eliminar" textFill="WHITE">
+         <font>
+            <Font name="Microsoft JhengHei" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="306.0" layoutY="468.0" prefHeight="22.0" prefWidth="49.0" text="Editar" textFill="WHITE">
+         <font>
+            <Font name="Microsoft JhengHei" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="300.0" layoutY="537.0" prefHeight="22.0" prefWidth="68.0" text="Reporte" textFill="WHITE">
+         <font>
+            <Font name="Microsoft JhengHei" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="600.0" fitWidth="100.0" layoutX="799.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/BarraVertical.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="809.0" layoutY="157.0" onMouseClicked="#menuPrincipal" text="Menu Principal">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <ImageView fitHeight="28.0" fitWidth="46.0" layoutX="835.0" layoutY="127.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Home.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Line endX="100.0" layoutX="799.0" layoutY="186.0" stroke="#2fb8bc" />
+      <Line endX="100.0" layoutX="799.0" layoutY="286.0" stroke="#2fb8bc" />
+      <Line endX="3.0" endY="600.0" layoutX="795.0" startX="3.0" stroke="#2fb8bc" />
+      <ImageView fitHeight="71.0" fitWidth="68.0" layoutX="810.0" layoutY="196.0" onMouseClicked="#ventanaMedicos" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons8-doctor-en-medicina-48.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="65.0" fitWidth="86.0" layoutX="818.0" layoutY="292.0" onMouseClicked="#ventanaEspecialidad" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons8-estetoscopio-64.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="821.0" layoutY="267.0" onMouseClicked="#ventanaMedicos" text="Medicos">
+         <cursor>
+            <Cursor fx:constant="NONE" />
+         </cursor>
+      </Label>
+      <Label layoutX="810.0" layoutY="357.0" onMouseClicked="#ventanaEspecialidad" text="Especialidad">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alvaroramirez.controller.ProgramadorController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="900.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Fondo.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="90.0" fitWidth="900.0" layoutY="15.0" opacity="0.56" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/barra.png" />
+         </image>
+      </ImageView>
+      <Label contentDisplay="RIGHT" layoutX="450.0" layoutY="184.0" prefHeight="29.0" prefWidth="323.0" text="Alvaro Gabriel Ramirez Alvarez ">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="266.0" fitWidth="352.0" layoutX="160.0" layoutY="157.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/WhatsApp%20Image%202019-07-05%20at%208.41.35%20PM.jpeg" />
+         </image>
+      </ImageView>
+      <Label layoutX="537.0" layoutY="157.0" prefHeight="27.0" prefWidth="240.0" text="DESARROLLADO POR...">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="129.0" layoutY="90.0" prefHeight="27.0" prefWidth="240.0" text="HOSPITAL INFECTOLOGIA" textFill="#830404">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="77.0" fitWidth="191.0" layoutX="655.0" layoutY="499.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/logo-en.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="27.0" layoutX="38.0" layoutY="524.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons8-facebook-50.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="83.0" layoutX="171.0" layoutY="524.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/eerDTf-logo-instagram-clipart-transparent.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="70.0" layoutY="534.0" text="\@gabriel Alvarez" />
+      <Label layoutX="214.0" layoutY="531.0" text="\@gabriel_ramire.z" />
+      <ImageView fitHeight="26.0" fitWidth="30.0" layoutX="473.0" layoutY="266.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/1043px-Microsoft_Outlook_2013_logo.svg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="28.0" fitWidth="46.0" layoutX="785.0" layoutY="27.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Home.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="10.0" layoutY="21.0" prefHeight="53.0" prefWidth="409.0" text="P R O G R A M A D O R" textFill="WHITE">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="576.0" layoutY="231.0" prefHeight="27.0" prefWidth="72.0" text="CORREO">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Label>
+      <Label contentDisplay="RIGHT" layoutX="511.0" layoutY="265.0" prefHeight="29.0" prefWidth="323.0" text="aramirez-2018025@kinal.edu.gt">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="576.0" layoutY="304.0" prefHeight="27.0" prefWidth="116.0" text="EMPRESA">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Label>
+      <Label contentDisplay="RIGHT" layoutX="562.0" layoutY="331.0" prefHeight="29.0" prefWidth="72.0" text="IN5BM">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="763.0" layoutY="55.0" onMouseClicked="#menuPrincipal" text="Menu Principal">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+   </children>
+</AnchorPane>

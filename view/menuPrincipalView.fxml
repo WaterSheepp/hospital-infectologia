@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alvaroramirez.controller.MenuPrincipalController">
+   <children>
+      <ImageView fitHeight="600.0" preserveRatio="true">
+         <image>
+            <Image url="@../images/FondoPR.png" />
+         </image></ImageView>
+      <ImageView fitHeight="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/doc2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="62.0" fitWidth="252.0" layoutX="480.0" layoutY="185.0" onMouseClicked="#CloseApp" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/generatedtext%20(7).png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="55.0" fitWidth="60.0" layoutX="740.0" layoutY="187.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/119042.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="275.0" layoutX="575.0" layoutY="251.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/generatedtext%20(10).png" />
+         </image>
+      </ImageView>
+      <MenuBar layoutX="491.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="27.0" prefWidth="408.0" style="-fx-background-color: #51d1d4;">
+        <menus>
+          <Menu mnemonicParsing="false" text="Acerca de">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ventanaProgramador" text="Programador" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Reporte">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ventanaReporteCita" text="Reporte de Cita " />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Modulos">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaMedicos" text="Medicos" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaPacientes" text="Pacientes" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaTurno" text="Turnos" />
+            </items>
+          </Menu>
+        </menus>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </MenuBar>
+   </children>
+</AnchorPane>
